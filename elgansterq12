@@ -1,0 +1,41 @@
+https://github.com/ELPATRICIO/Ganador-s-lido.git# Cloning a repository
+~/Projects/my-project$ gh repo clone https://github.com/cli/cli
+Cloning into 'cli'...
+remote: Enumerating objects: 99, done.
+remote: Counting objects: 100% (99/99), done.
+remote: Compressing objects: 100% (76/76), done.
+remote: Total 21160 (delta 49), reused 35 (delta 18), pack-reused 21061
+Receiving objects: 100% (21160/21160), 57.93 MiB | 10.82 MiB/s, done.
+Resolving deltas: 100% (16051/16051), done.
+
+~/Projects/my-project$# Cloning a repository
+~/Projects$ gh repo clone cli/cli
+Cloning into 'cli'...
+~/Projects$ cd cli
+~/Projects/cli$$ gh config set editor vim
+$ gh config set editor "code --wait"
+$ gh config set git_protocol ssh --host github.com
+$ gh config set prompt disabled
+gh pr review [<number> | <url> | <branch>] [flags]
+Examples
+# approve the pull request of the current branch
+$ gh pr review --approve
+
+# leave a review comment for the current branch
+$ gh pr review --comment -b "interesting"
+
+# add a review for a specific pull request
+$ gh pr review 123
+
+# request changes on a specific pull request
+$ gh pr review 123 -r -b "needs more ASCII art"
+
+Options
+  -a, --approve           Approve pull request
+  -b, --body string       Specify the body of a review
+  -F, --body-file file    Read body text from file
+  -c, --comment           Comment on a pull request
+  -r, --request-changes   Request changes on a pull request
+Options inherited from parent commands
+      --help                     Show help for command
+  -R, --repo [HOST/]OWNER/REPO   Select another repository using the [HOST/]OWNER/REPO format
